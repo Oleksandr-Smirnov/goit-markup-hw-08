@@ -4,6 +4,9 @@
     text-transform: uppercase;
     color: var(--second-title-color);
     margin-bottom: 10px;
+      @media screen and (max-width: 767px) {
+           text-align: center;
+        }
 }
 
 .principies__text {
@@ -13,16 +16,25 @@
 .principies__list {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
+    
+   
 }
 
 .principies__item {
     align-items: center;
-    width: 270px;
-}
+       width: 100%;
+    @media screen and (min-width: 768px) {
+            width: calc((100% - 30px) / 2 );
+            }
+                        @media screen and (min-width: 1200px) {
+                            width: calc((100% - 90px) / 4);
+                        }
+   }
 
 .principies__background {
     background-color: #f5f4fa;
-    width: 270px;
+    // width: 270px;
     height: 120px;
     display: flex;
     justify-content: center;
