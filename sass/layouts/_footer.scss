@@ -3,11 +3,20 @@
     padding-top: 60px;
     padding-bottom: 60px;
     & .container {
+        @include mobile {
+        display: block;
+        text-align: center;
+        }
+        @include tablet {
+            display: flex;
+           }
+           @include desktop {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
+           }
         }
-}
+    }
 
 .footer-adress {
     font-style: normal;
@@ -18,10 +27,12 @@
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    // font-size: 26px;
+    font-size: 24px;
     line-height: 1.19;
     color: var(--accent-color);
-}
+        }
+
 
 .footer-logo-studio {
     color: var(--main-title-color);
@@ -54,6 +65,7 @@
     text-transform: uppercase;
     color: #ffffff;
     align-items: baseline;
+    margin-top: 60px;
 }
 
 .footer-soc-text {
@@ -63,6 +75,9 @@
 .footer-soc-list {
     display: flex;
     gap: 10px;
+    @include mobile {
+        justify-content: center;
+    }
 }
 
 .footer-soc-icon {
@@ -95,6 +110,7 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding-left: 16px;
+    margin-bottom: 20px;
     &::placeholder {
             font-size: 16px;
             line-height: 1.25;
@@ -121,10 +137,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include mobile {
+        display: inline-flex;
+    }
 }
 
 .subscription {
-    display: flex;
+    // display: flex;
     align-items: flex-end;
 }
 

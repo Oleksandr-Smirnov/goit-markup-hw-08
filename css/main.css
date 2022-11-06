@@ -680,10 +680,23 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer .container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+@media screen and (min-width: 480px) {
+  .footer .container {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer .container {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
 
 .footer-adress {
@@ -695,7 +708,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   color: var(--accent-color);
 }
@@ -730,6 +743,7 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   align-items: baseline;
+  margin-top: 60px;
 }
 
 .footer-soc-text {
@@ -739,6 +753,11 @@ body {
 .footer-soc-list {
   display: flex;
   gap: 10px;
+}
+@media screen and (min-width: 480px) {
+  .footer-soc-list {
+    justify-content: center;
+  }
 }
 
 .footer-soc-icon {
@@ -770,6 +789,7 @@ body {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding-left: 16px;
+  margin-bottom: 20px;
 }
 .footer-subscribe::-moz-placeholder {
   font-size: 16px;
@@ -813,9 +833,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 480px) {
+  .subscribe-btn {
+    display: inline-flex;
+  }
+}
 
 .subscription {
-  display: flex;
   align-items: flex-end;
 }
 
