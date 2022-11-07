@@ -1,29 +1,67 @@
 .hero.section {
     background: var(--second-background);
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/slider/main-img.jpg);
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: var(--hero-gradient),
+        url(../images/slider/main-img-mob.jpg);
     background-size: cover;
     max-width: 1600px;
-    height: 600px;
+    height: 400px;
     margin-right: auto;
     margin-left: auto;
     background-position: center;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: var(--hero-gradient),
+                url(../images/slider/main-img-mob2x.jpg);
+                   }
+    @include tablet {
+    background-image: var(--hero-gradient),
+            url(../images/slider/main-img-tablet.jpg);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: var(--hero-gradient),
+                        url(../images/slider/main-img-tablet2x.jpg);
+                }
+    }
+    @include desktop {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        height: 600px;
+        background-image: var(--hero-gradient),
+                url(../images/slider/main-img.jpg);
+                @media (min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                        background-image: var(--hero-gradient),
+                            url(../images/slider/main-img2x.jpg);
+                    }
+    }
 }
 
 .hero__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+     font-size: 20px;
+     line-height: 1.61;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--main-title-color);
     margin-bottom: 30px;
-    width: 696px;
+        
     margin-left: auto;
     margin-right: auto;
+    @include mobile {
+        font-size: 26px;
+    width: 360px;
+    }
+    @include desktop {
+        font-size: 44px;
+        line-height: 1.36;
+        width: 696px;
+    }
 }
 
 .btn {
