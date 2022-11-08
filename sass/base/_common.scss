@@ -4,3 +4,7 @@ body {
     font-size: 14px;
     color: var(--main-text-color);
 }
+
+.no-scroll {
+    overflow: hidden;
+}

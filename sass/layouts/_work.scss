@@ -25,3 +25,9 @@
     bottom: 0px;
     color: var(--main-title-color);
 }
+
+.work {
+@media screen and (max-width: 1199px) {
+        display: none;
+    }
+  }
