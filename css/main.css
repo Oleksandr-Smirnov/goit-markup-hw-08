@@ -136,7 +136,6 @@ body {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  width: 528px;
   min-height: 581px;
   position: absolute;
   top: 50%;
@@ -144,6 +143,21 @@ body {
   transform: translate(-50%, -50%) scaleX(1);
   transition: transform 250ms linear;
   padding: 40px;
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 95%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal-btn {
@@ -173,10 +187,15 @@ body {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--second-title-color);
   margin-bottom: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.15;
+  }
 }
 
 .modal-input {
@@ -294,8 +313,8 @@ body {
 }
 
 .check-text {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 10px;
+  line-height: 1.16;
   color: var(--main-text-color);
   display: flex;
   align-items: baseline;
@@ -322,6 +341,17 @@ body {
 }
 .checkbox:focus + .check-text span {
   border-color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .check-text {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-privacy {
@@ -449,21 +479,6 @@ body {
   fill: var(--accent-color);
 }
 
-.menu__inner {
-  color: var(--accent-color);
-}
-.menu__inner::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -32px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: #2196f3;
-  border-radius: 2px;
-}
-
 .menu-open-btn {
   margin-left: auto;
   border: none;
@@ -582,6 +597,21 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.menu__inner {
+  color: var(--accent-color);
+}
+.menu__inner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -32px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
 }
 
 .hero.section {

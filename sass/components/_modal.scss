@@ -15,7 +15,6 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    width: 528px;
     min-height: 581px;
     position: absolute;
     top: 50%;
@@ -23,6 +22,15 @@
     transform: translate(-50%, -50%) scaleX(1);
     transition: transform 250ms linear;
     padding: 40px;
+    @media screen and (max-width: 479px) {
+        width: 95%;
+    }
+    @include mobile {
+        width: 450px;
+    }
+    @include desktop {
+        width: 528px;
+    }
 }
 
 .modal-btn {
@@ -52,10 +60,13 @@
 .modal-title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     color: var(--second-title-color);
     margin-bottom: 12px;
+    @include desktop {
+        line-height: 1.15;
+    }
 }
 
 .modal-input {
@@ -149,8 +160,10 @@
 }
 
 .check-text {
-    font-size: 14px;
-    line-height: 1.71;
+    // font-size: 14px;
+    // line-height: 1.71;
+    font-size: 10px;
+    line-height: 1.16;
     color: var(--main-text-color);
     display: flex;
     align-items: baseline;
@@ -177,6 +190,14 @@
                                                                 .checkbox:focus+& span {
                                                                     border-color: var(--accent-color);
                                                                 }
+ @include mobile {
+    font-size: 12px;
+  }
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;  
+}
 }
 
 .modal-privacy {

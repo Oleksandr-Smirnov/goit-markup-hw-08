@@ -3,10 +3,11 @@
     padding-top: 60px;
     padding-bottom: 60px;
     & .container {
-        @include mobile {
+        @media screen and (max-width:479px 
+        {
         display: block;
-        text-align: center;
-        }
+            text-align: center;
+        } 
             @include desktop {
             display: flex;
             align-items: baseline;
