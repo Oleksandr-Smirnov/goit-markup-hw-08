@@ -24,16 +24,24 @@
 
 .footer-contact {
         display: inline-block;
+        margin-bottom: 60px;
+        @include tablet {
+            margin-bottom: 0;
+        }
         @include desktop {
             margin-right: 70px;
         }
    }
 
    .footer-tablet {
+    margin-bottom: 60px;
     @include tablet {
     display: flex;
     justify-content: space-around;
     align-items: baseline;    }
+    @include desktop {
+        margin-bottom: 0;
+    }
     
    }
 
@@ -81,10 +89,7 @@
     text-transform: uppercase;
     color: #ffffff;
     align-items: baseline;
-    margin-top: 60px;
-    @include desktop {
-        margin-top: 0;
-    }
+    margin-top: 0;
         }
 
 .footer-soc-text {
